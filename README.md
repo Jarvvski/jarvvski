@@ -1,5 +1,4 @@
-<h2>Hi! I'm Adam 👋</h2>
-<p>Most people call me Jarvis. </p>
+<h2>Hi! I'm Jarvis 👋</h2>
 <table>
 <tr>
 <td>
