@@ -14,7 +14,7 @@ languages I enjoy using
 tools
 </td>
 <td>
-<img alt="sublime" src="https://img.shields.io/badge/sublime_text-23575757?style=flat-square&logo=sublime-text&logoColor=important">
+<img alt="sublime" src="https://img.shields.io/badge/sublime_text-696969?style=flat-square&logo=sublime-text&logoColor=important">
 <img alt="Intellij IDEA" src="https://img.shields.io/badge/-IDEA-696969?style=flat-square&logo=intellij-idea&logoColor=fff">
 <img alt="Docker" src="https://img.shields.io/badge/-Docker-696969?style=flat-square&logo=docker&logoColor=0091e2">
 <img alt="Kubernetes" src="https://img.shields.io/badge/-Kubernetes-696969?style=flat-square&logo=kubernetes&logoColor=3371e3">
