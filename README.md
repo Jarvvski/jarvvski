@@ -7,6 +7,7 @@ languages I enjoy using
 <td>
 <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white">
 <img alt="Golang" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
+<img alt="PHP" src="https://img.shields.io/badge/PHP-00ADD8?style=for-the-badge&logo=php&logoColor=white">  
 </td>
 <tr>
 <tr>
