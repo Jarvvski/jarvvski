@@ -5,6 +5,7 @@
 languages I enjoy using
 </td>
 <td>
+<img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white">
 <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white">
 <img alt="Golang" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
 <img alt="PHP" src="https://img.shields.io/badge/PHP-8892bf?style=for-the-badge&logo=php&logoColor=white">  
