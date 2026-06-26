@@ -17,7 +17,8 @@ jobs:
       - name: Generate metrics
         uses: lowlighter/metrics@latest
         with:
-          # A classic PAT with scopes: public_repo (or repo) + read:user.
+          # Classic PAT with scopes: repo + read:org + read:user, SSO-authorised
+          # for the amebaai org so private/work activity is counted.
           # Stored as the METRICS_TOKEN repo secret.
           token: ${{ secrets.METRICS_TOKEN }}
           user: Jarvvski
@@ -27,12 +28,19 @@ jobs:
           config_display: large       # wider card, fills the profile column
           config_animations: yes
 
+          # Readability: frame the card as a solid panel (it renders transparent by
+          # default, so grey text melts into GitHub's dark page). Lift text contrast.
+          extras_css: |
+            svg { background: #161b22; color: #c9d1d9; }
+            h1, h2, h3 { color: #58a6ff; }
+
           # Keep only the identity header from the base; everything else is curated below.
           base: header
 
-          # Centerpiece: 3D isometric contribution calendar (looks great regardless of volume).
+          # Centerpiece: 3D isometric contribution calendar. half-year keeps it compact
+          # and legible rather than sprawling diagonally across the whole card.
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
 
           # Polyglot depth: real most-used + recently-used breakdown (Kotlin / Go / Rust / TS).
           plugin_languages: yes
@@ -51,11 +59,6 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_from: 200
           plugin_habits_days: 14
-
-          # GitHub achievement badges, compact row.
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: C
 
           # Tie the card back to the project bullets in the README.
           plugin_repositories: yes
