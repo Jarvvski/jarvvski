@@ -37,4 +37,4 @@ Backend and platform engineer building AI agents for the supply-chain world. I l
 </tr>
 </table>
 
-<img alt="Adam's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Jarvvski&show_icons=true&hide_border=true&theme=transparent">
+<img alt="Adam's GitHub metrics" src="github-metrics.svg">

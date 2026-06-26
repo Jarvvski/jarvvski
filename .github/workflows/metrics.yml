@@ -1,0 +1,27 @@
+name: metrics
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # daily at 06:00 UTC
+  workflow_dispatch:        # allow manual runs
+  push:
+    branches: [master]      # regenerate when the profile changes
+
+permissions:
+  contents: write           # the action commits github-metrics.svg back to the repo
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # A classic PAT with scopes: public_repo (or repo) + read:user.
+          # Stored as the METRICS_TOKEN repo secret.
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Jarvvski
+          filename: github-metrics.svg
+          template: classic
+          base: header, activity, community, repositories
+          config_timezone: Europe/London
