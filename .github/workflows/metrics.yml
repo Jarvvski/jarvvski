@@ -23,5 +23,40 @@ jobs:
           user: Jarvvski
           filename: github-metrics.svg
           template: classic
-          base: header, activity, community, repositories
           config_timezone: Europe/London
+          config_display: large       # wider card, fills the profile column
+          config_animations: yes
+
+          # Keep only the identity header from the base; everything else is curated below.
+          base: header
+
+          # Centerpiece: 3D isometric contribution calendar (looks great regardless of volume).
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # Polyglot depth: real most-used + recently-used breakdown (Kotlin / Go / Rust / TS).
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: percentage
+          plugin_languages_recent_days: 30
+          plugin_languages_limit: 8
+          plugin_languages_colors: github
+
+          # Work-rhythm: data-rich charts + facts (reads as "active, methodical engineer").
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: graph
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+
+          # GitHub achievement badges, compact row.
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
+
+          # Tie the card back to the project bullets in the README.
+          plugin_repositories: yes
+          plugin_repositories_featured: jarvvski/aterm, jarvvski/wsg
