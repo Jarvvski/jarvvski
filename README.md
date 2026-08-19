@@ -1,11 +1,11 @@
-## Hi! I'm Adam 👋
+## Hi! I'm Jarvis 👋
 
-Backend and platform engineer building AI agents for the supply-chain world. I like type-safe systems, infrastructure that explains itself, and shipping things that hold up in production.
+Backend and platform engineer at [Ameba](https://ameba.ai) ([@amebaai](https://github.com/amebaai)), building developer tools and infrastructure for AI agents. I work across Rust, Go, Kotlin, cloud, and containers, with a soft spot for systems that make complex work feel simple.
 
-- 🤖 Building supply-chain AI agents at [Ameba](https://ameba.ai) ([@amebaai](https://github.com/amebaai))
-- 🦀 For fun: [aterm](https://github.com/jarvvski/aterm), a native macOS GPU terminal in Rust with a built-in agent (winit + wgpu)
-- 🐹 ...and [wsg](https://github.com/jarvvski/wsg), a Go workspace manager that runs a pool of Jujutsu workspaces and dispatches GitHub issues to Claude Code agents
-- 🎤 Out in the wild at AWS Summits, DockerCon, and community meetups - come say hi
+- 🔥 [Flint](https://github.com/AmebaAI/flint): a local Docker emulator for AWS Bedrock AgentCore Runtime containers
+- 🦀 [jjfx](https://github.com/jarvvski/jjfx): a Rust TUI for Jujutsu workspaces and the agents editing them
+- 🖥️ [aterm](https://github.com/jarvvski/aterm): a native, GPU-rendered macOS terminal with an agentic AI loop
+- 🐹 [wsg](https://github.com/jarvvski/wsg): a Go tool for Jujutsu workspaces and agent dispatch
 
 <table>
 <tr>
