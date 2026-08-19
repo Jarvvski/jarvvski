@@ -5,7 +5,6 @@ Backend and platform engineer at [Ameba](https://ameba.ai) ([@amebaai](https://g
 - 🔥 [Flint](https://github.com/AmebaAI/flint): a local Docker emulator for AWS Bedrock AgentCore Runtime containers
 - 🦀 [jjfx](https://github.com/jarvvski/jjfx): a Rust TUI for Jujutsu workspaces and the agents editing them
 - 🖥️ [aterm](https://github.com/jarvvski/aterm): a native, GPU-rendered macOS terminal with an agentic AI loop
-- 🐹 [wsg](https://github.com/jarvvski/wsg): a Go tool for Jujutsu workspaces and agent dispatch
 
 <table>
 <tr>
