@@ -2,9 +2,14 @@
 
 Backend and platform engineer at [Ameba](https://ameba.ai) ([@amebaai](https://github.com/amebaai)), building developer tools and infrastructure for AI agents. I work across Rust, Go, Kotlin, cloud, and containers, with a soft spot for systems that make complex work feel simple.
 
-- 🔥 [Flint](https://github.com/AmebaAI/flint): a local Docker emulator for AWS Bedrock AgentCore Runtime containers
+### What I'm working on
+
+- 🔥 [Flint](https://github.com/AmebaAI/flint): a local Docker emulator for AWS Bedrock AgentCore Runtime containers. [My pull requests](https://github.com/AmebaAI/flint/pulls?q=author%3AJarvvski)
 - 🦀 [jjfx](https://github.com/jarvvski/jjfx): a Rust TUI for Jujutsu workspaces and the agents editing them
-- 🖥️ [aterm](https://github.com/jarvvski/aterm): a native, GPU-rendered macOS terminal with an agentic AI loop
+- 📦 [momo](https://github.com/jarvvski/momo): a Rust CLI that turns a project's accumulated changes into semver releases, a changelog, and VCS tags. Flint uses it for versioning and the changelog.
+- 🌿 [jj](https://github.com/jj-vcs/jj): contributions, including [op_store: preserve ancestors of operations kept by gc](https://github.com/jj-vcs/jj/pull/10396). [My pull requests](https://github.com/jj-vcs/jj/pulls?q=author%3AJarvvski)
+
+[aterm](https://github.com/jarvvski/aterm): a native, GPU-rendered macOS terminal with an agentic AI loop.
 
 <table>
 <tr>
@@ -36,4 +41,4 @@ Backend and platform engineer at [Ameba](https://ameba.ai) ([@amebaai](https://g
 </tr>
 </table>
 
-<img alt="Adam's GitHub metrics" src="github-metrics.svg">
+<img alt="Adam's GitHub metrics" src="https://raw.githubusercontent.com/Jarvvski/jarvvski/metrics/github-metrics.svg">

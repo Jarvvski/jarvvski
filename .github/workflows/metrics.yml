@@ -7,8 +7,14 @@ on:
   push:
     branches: [master]      # regenerate when the profile changes
 
+# A later run waits, then replaces the metrics branch. Runs must not
+# append commits, on master or on metrics.
+concurrency:
+  group: metrics
+  cancel-in-progress: false
+
 permissions:
-  contents: write           # the action commits github-metrics.svg back to the repo
+  contents: write           # force-update the metrics branch; master is not written
 
 jobs:
   metrics:
@@ -23,6 +29,12 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Jarvvski
           filename: github-metrics.svg
+          # `commit` (the default) and `committer_branch` both append a commit
+          # per run, and GitHub counts every branch toward repository size.
+          # `none` only writes /metrics_renders/github-metrics.svg. The next
+          # step publishes that file as one orphan commit.
+          # https://github.com/lowlighter/metrics/blob/master/source/plugins/core/README.md
+          output_action: none
           template: classic
           config_timezone: Europe/London
           config_display: large       # wider card, fills the profile column
@@ -54,4 +66,26 @@ jobs:
 
           # Tie the card back to the project bullets in the README.
           plugin_repositories: yes
-          plugin_repositories_featured: jarvvski/aterm, jarvvski/wsg
+          plugin_repositories_featured: AmebaAI/flint, jarvvski/jjfx, jarvvski/momo
+
+      - name: Publish SVG to the metrics branch
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          src=/metrics_renders/github-metrics.svg
+          sudo test -s "$src"
+          work="$(mktemp -d)"
+          sudo cp "$src" "$work/github-metrics.svg"
+          sudo chown "$(id -u):$(id -g)" "$work/github-metrics.svg"
+          git -C "$work" init -b metrics
+          git -C "$work" config user.name "github-actions[bot]"
+          git -C "$work" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$work" add github-metrics.svg
+          git -C "$work" commit -m "Update github-metrics.svg - [Skip GitHub Action]"
+          # Replace the branch tip. The previous orphan becomes unreachable,
+          # so this ref stays one commit and one SVG.
+          git -C "$work" push --force \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            HEAD:refs/heads/metrics
